@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Japneet Kaur Oberoi",
+    "section": "",
+    "text": "I am currently pursuing a Master of Business Analytics at Monash University. I hold a Bachelor’s degree in Commerce from Delhi University, where I developed a strong foundation in business principles and economics. My current focus is on leveraging data analytics and machine learning to solve complex business problems and drive data-informed decision-making.\nIn addition to my studies, I co-manage a YouTube channel with a friend, where we post vlogs exploring various places around Melbourne. It’s a creative outlet that allows me to showcase the vibrant culture and hidden gems of the city. Whether it’s through data or digital content, I enjoy connecting with others and sharing experiences."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog Template",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!"
+  }
+]
