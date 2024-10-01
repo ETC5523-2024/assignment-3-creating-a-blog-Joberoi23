@@ -2,3 +2,37 @@
 .navbar-dark, .quarto-title-banner {
   background-color: #006DAE;
 }
+
+body {
+  background-color: #1e1e1e;  /* Dark grey background for consistency with cyborg theme */
+  color: #e0e0e0; /* Light grey text for readability */
+}
+
+/* Custom Font Colors for Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #00d1b2;  /* Bright teal for headings */
+}
+
+/* Customize Links */
+a {
+  color: #ffdd57;  /* Yellow link color for contrast against dark background */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f39c12;  /* Slightly darker yellow on hover */
+}
+
+/* Code Blocks */
+pre, code {
+  background-color: #2d2d2d;  /* Darker grey for code blocks */
+  color: #e0e0e0;  /* Light grey text in code blocks */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #272b30;  /* Darker background for the navbar */
+}
+
+.navbar a {
+  color: #00d1b2;  /* Teal color for navbar links */
