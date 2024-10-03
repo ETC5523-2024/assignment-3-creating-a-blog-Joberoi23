@@ -9,15 +9,64 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog Template",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!"
+    "text": "This is a blog post about Literacy Rates in India. Welcome!"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
     "section": "",
-    "text": "Welcome To My Blog Template\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 18, 2022\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
+    "text": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nOct 4, 2024\n\n\nJapneet Kaur Oberoi\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#problem-description",
+    "href": "index.html#problem-description",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
+    "section": "",
+    "text": "Any nation’s literacy rate is a key sign of its socio-economic development. The actual literacy rate in India is calculated by dividing the total number of literate people aged 7 or older by the total population aged 7 or older, then multiplying the result by 100. Literacy data is gathered every ten years through the census. This regulates the percentage of the population proficient in reading and writing. In this blog we are looking at the variations in literacy rates between the 2001 and 2011 census periods across Indian states and union territories for the analysis. The objective is to comprehend local advancements and pinpoint areas that would require additional educational policies."
+  },
+  {
+    "objectID": "index.html#data-description",
+    "href": "index.html#data-description",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
+    "section": "Data Description",
+    "text": "Data Description\nData Source\nThe data set was downloaded from the Kaggle Website called Govt Of India Literacy Rate. Firstly we logged into the Kaggle website using a gmail account then we looked for literacy rates of India released by the government. The website provides a csv file which is easy to download and then it was loaded in Rstudio using the read_csv function.\n\ndata &lt;- read_csv(\"data/GOI.csv\")\n\nRows: 36 Columns: 8\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): Category, Country/ States/ Union Territories Name\ndbl (6): Literacy Rate (Persons) - Total - 2001, Literacy Rate (Persons) - T...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nData Dictionary\nThe data set has 8 variables which include information about the percentage of literacy rates of India and the states and Union territories in India. It also calculates the rates for Urban and rural populations for the years 2001 and 2011. The variables are:\n\nCategory: Indicates whether the entry is a State or a Union Territory.\nCountry/ States/ Union Territories Name: The names of the state or union territory.\nLiteracy Rate (Persons) - Total - 2001: Overall percentage of literacy rate in 2001.\nLiteracy Rate (Persons) - Total - 2011: Overall percentage of literacy rate in 2011.\nLiteracy Rate (Persons) - Rural - 2001: Percentage of Rural literacy rate in 2001.\nLiteracy Rate (Persons) - Rural - 2011: Percentage of Rural literacy rate in 2011.\nLiteracy Rate (Persons) - Urban - 2001: Percentage of Urban literacy rate in 2001.\nLiteracy Rate (Persons) - Urban - 2011: Percentage of Urban literacy rate in 2011.\n\nIndia has 28 States and 8 Union Territories. States enjoy a higher degree of autonomy, managing local governance, education, health, and law enforcement, while union territories are typically governed by the central government. Some union territories, like Delhi and Puducherry, have partial statehood, allowing them to have their own legislatures with limited authority.\nDetails of work"
+  },
+  {
+    "objectID": "index.html#analysis",
+    "href": "index.html#analysis",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
+    "section": "Analysis",
+    "text": "Analysis"
+  },
+  {
+    "objectID": "posts/welcome/index.html#problem-description",
+    "href": "posts/welcome/index.html#problem-description",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
+    "section": "Problem Description",
+    "text": "Problem Description\nAny nation’s literacy rate is a key sign of its socio-economic development. The literacy rate in India is calculated by dividing the total number of literate people aged 7 or older by the total population aged 7 or older, then multiplying the result by 100. Literacy data is gathered every ten years through the census. This literacy rate informs about the percentage of the population proficient in reading and writing.\nIn this blog, we look at the differences in literacy rates between the 2001 and 2011 census periods across Indian states and union territories. The main goal is to check whether there have been any significant improvements in total literacy rates over the years and to examine the differences between rural and urban literacy rates. The analysis also aims to determine whether there is a notable gap between rural and urban literacy rates and whether the gap is narrow or wide."
+  },
+  {
+    "objectID": "posts/welcome/index.html#data-description",
+    "href": "posts/welcome/index.html#data-description",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
+    "section": "Data Description",
+    "text": "Data Description\nData Source\nThe data set was downloaded from the Kaggle Website called Govt Of India Literacy Rate. Firstly we logged into the Kaggle website using a gmail account then we looked for literacy rates of India released by the government. The website provides a csv file which is easy to download and then it was loaded in Rstudio using the read_csv function.\nData Dictionary\nThe data set has 8 variables which include information about the percentage of literacy rates of India and the states and Union territories in India. It also calculates the rates for Urban and rural populations for the years 2001 and 2011. The variables are:\n\nCategory: Indicates whether the entry is a State or a Union Territory.\nCountry/ States/ Union Territories Name: The names of the state or union territory.\nLiteracy Rate (Persons) - Total - 2001: Overall percentage of literacy rate in 2001.\nLiteracy Rate (Persons) - Total - 2011: Overall percentage of literacy rate in 2011.\nLiteracy Rate (Persons) - Rural - 2001: Percentage of Rural literacy rate in 2001.\nLiteracy Rate (Persons) - Rural - 2011: Percentage of Rural literacy rate in 2011.\nLiteracy Rate (Persons) - Urban - 2001: Percentage of Urban literacy rate in 2001.\nLiteracy Rate (Persons) - Urban - 2011: Percentage of Urban literacy rate in 2011.\n\nIndia has 28 states and 8 union territories. States enjoy a more autonomy, managing local governance, education, health, and law enforcement, while union territories are typically governed by the central government. Some union territories, like Delhi and Puducherry, have partial statehood, allowing them to have their own legislatures with limited authority.\nWhile the data set used in the analysis is from the 2001 and 2011 census, it only includes information for 7 Union territories. This is because Ladakh, the 8th Union territory, was not formed until 2019, after being separated from the state of Jammu and Kashmir. Therefore, Ladakh is not represented in the census data used for this analysis.\nDetails of work"
+  },
+  {
+    "objectID": "posts/welcome/index.html#analysis",
+    "href": "posts/welcome/index.html#analysis",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
+    "section": "Analysis",
+    "text": "Analysis\nThe plots show the Total Literacy Rates across all states in India from the 2001 and 2011 censuses.\n\nStates like Kerala, Mizoram, and Goa consistently show high literacy rates across both 2001 and 2011.\nStates with lower literacy rates in 2001, such as Bihar and Jharkhand, show some improvement by 2011, although they continue to have lower literacy rates compared to other states.\nMost states show an overall increase in literacy rates over the decade, indicating that educational policies and initiatives taken during this period may have had a positive impact.\n\n\n\n\n\n\n\n\n\nFigure 1: Comparison of Literacy Rates in States (2001 vs 2011)\n\n\n\n\n\nFigure 1 shows the plot The plots\n\n\n\n\n\n\n\n\nFigure 2: Comparison of Literacy Rates in Union Territories (2001 vs 2011)\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Comparison of Rural and Urban Literacy Rates in States (2011)\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: Comparison of Rural and Urban Literacy Rates in Union Territories (2011)\n\n\n\n\n\n\n\n\n\nTable 1: Highest Literacy rates in Urban and Rural region of India\n\n\n\n\nTop 10 States/Union Territories with Highest Rural and Urban Literacy Rates (2011 vs 2001)\n\n\n\n\n\n\n\n\n\nCountry/ States/ Union Territories Name\nLiteracy Rate (Persons) - Rural - 2001\nLiteracy Rate (Persons) - Urban - 2001\nLiteracy Rate (Persons) - Rural - 2011\nLiteracy Rate (Persons) - Urban - 2011\n\n\n\n\nKerala\n90.0\n93.2\n93.0\n95.1\n\n\nLakshadweep\n85.0\n88.6\n91.6\n91.9\n\n\nGoa\n79.7\n84.4\n86.6\n90.0\n\n\nTripura\n69.7\n89.2\n84.9\n93.5\n\n\nA & N Islands\n78.7\n86.6\n84.5\n90.1\n\n\nMizoram\n81.3\n96.1\n84.1\n97.6\n\n\nHimachal Pradesh\n75.1\n88.9\n81.9\n91.1\n\n\nNCT of Delhi\n78.1\n81.9\n81.9\n86.3\n\n\nDaman & Diu\n75.8\n82.3\n81.4\n89.0\n\n\nChandigarh\n75.6\n82.6\n80.7\n86.2"
+  },
+  {
+    "objectID": "index1.html",
+    "href": "index1.html",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
+    "section": "",
+    "text": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)\n\n\n\n\n\n\nblog\n\n\n\n\n\n\n\n\n\nOct 4, 2024\n\n\nJapneet Kaur Oberoi\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -1,12 +1,216 @@
 ---
-title: "Welcome To My Blog Template"
-author: "Emi Tanaka"
-date: "2022-07-18"
-categories: [news]
+title: "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)"
+author: "Japneet Kaur Oberoi"
+date: "2024-10-04"
+categories: [blog]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+This is a blog post about Literacy Rates in India. Welcome!
 
 ![](thumbnail.jpg)
 
+```{r, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+library(kableExtra)
+library(patchwork)
+```
+
+## Problem Description 
+
+Any nation's literacy rate is a key sign of its socio-economic development. The literacy rate in India is calculated by dividing the total number of literate people aged 7 or older by the total population aged 7 or older, then multiplying the result by 100. Literacy data is gathered every ten years through the census. This literacy rate informs about the percentage of the population proficient in reading and writing. 
+
+In this blog, we look at the differences in literacy rates between the 2001 and 2011 census periods across Indian states and union territories. The main goal is to check whether there have been any significant improvements in total literacy rates over the years and to examine the differences between rural and urban literacy rates. The analysis also aims to determine whether there is a notable gap between rural and urban literacy rates and whether the gap is narrow or wide.
+
+
+## Data Description
+
+**Data Source**
+
+The data set was downloaded from the [Kaggle Website](https://www.kaggle.com/) called [Govt Of India Literacy Rate](https://www.kaggle.com/datasets/doncorleone92/govt-of-india-literacy-rate?resource=download). Firstly we logged into the Kaggle website using a gmail account then we looked for literacy rates of India released by the government. The website provides a csv file which is easy to download and then it was loaded in Rstudio using the `read_csv` function.
+
+
+```{r, include=FALSE}
+data <- read_csv(here::here("data/GOI.csv"))
+data <- data[-1, ]
+```
+
+**Data Dictionary**
+
+The data set has 8 variables which include information about the percentage of literacy rates of India and the states and Union territories in India. It also calculates the rates for Urban and rural populations for the years 2001 and 2011.
+The variables are:
+
+1) Category: Indicates whether the entry is a State or a Union Territory.
+2) Country/ States/ Union Territories Name: The names of the state or union territory.
+3) Literacy Rate (Persons) - Total - 2001: Overall percentage of literacy rate in 2001.
+4) Literacy Rate (Persons) - Total - 2011: Overall percentage of literacy rate in 2011.
+5) Literacy Rate (Persons) - Rural - 2001: Percentage of Rural literacy rate in 2001.
+6) Literacy Rate (Persons) - Rural - 2011: Percentage of Rural literacy rate in 2011.
+7) Literacy Rate (Persons) - Urban - 2001: Percentage of Urban literacy rate in 2001.
+8) Literacy Rate (Persons) - Urban - 2011: Percentage of Urban literacy rate in 2011.
+
+
+India has 28 states and 8 union territories. States enjoy a more autonomy, managing local governance, education, health, and law enforcement, while union territories are typically governed by the central government. Some union territories, like Delhi and Puducherry, have partial statehood, allowing them to have their own legislatures with limited authority. 
+
+While the data set used in the analysis is from the 2001 and 2011 census, it only includes information for 7 Union territories. This is because Ladakh, the 8th Union territory, was not formed until 2019, after being separated from the state of Jammu and Kashmir. Therefore, Ladakh is not represented in the census data used for this analysis.
+
+**Details of work**
+
+
+
+
+## Analysis
+
+The plots in @fig-1 shows the Total Literacy Rates across all states in India from the 2001 and 2011 censuses.
+
+- States like Kerala, Mizoram, and Goa consistently show high literacy rates across both 2001 and 2011.
+
+- States with lower literacy rates in 2001, such as Bihar and Jharkhand, show some improvement by 2011, although they continue to have lower literacy rates compared to other states.
+
+- Most states show an overall increase in literacy rates over the decade, indicating that educational policies and initiatives taken during this period may have had a positive impact.
+
+```{r}
+#| echo: FALSE
+#| label: fig-1
+#| fig-cap: "Comparison of Literacy Rates in States (2001 vs 2011)"
+
+# Subsetting the data into states 
+states_data <- data[data$Category == "State", ]
+
+# Defining a common order for states based on the 2001 literacy rates
+states_data$State_Order <- reorder(states_data$`Country/ States/ Union Territories Name`, 
+                                   states_data$`Literacy Rate (Persons) - Total - 2001`)
+
+
+# Plotting for 2001 Literacy Rates for States
+plot_2001_states <- ggplot(states_data, aes(x = State_Order, y = `Literacy Rate (Persons) - Total - 2001`)) +
+  geom_bar(stat = "identity", fill = "pink") +
+  coord_flip() +
+  labs(x = "State", y = "Literacy Rate (2001)", title = "Rates in States (2001)") +
+  theme_minimal()
+
+# Plotting for 2011 Literacy Rates for States, keeping the same order as 2001
+plot_2011_states <- ggplot(states_data, aes(x = State_Order, y = `Literacy Rate (Persons) - Total - 2011`)) +
+  geom_bar(stat = "identity", fill = "darkblue") +
+  coord_flip() +
+  labs(x = "State", y = "Literacy Rate (2011)", title = "Rates in States (2011)") +
+  theme_minimal()
+
+# Displaying states plots side by side
+plot_2001_states | plot_2011_states
+```
+
+The plots in @fig-2 showcases the Total Literacy Rates across all union territories in India from the 2001 and 2011 censuses.
+
+- 
+
+```{r}
+#| echo: FALSE
+#| label: fig-2
+#| fig-cap: "Comparison of Literacy Rates in Union Territories (2001 vs 2011)"
+
+# Subsetting the data into union territories
+uts_data <- data[data$Category == "Union Territory", ]
+
+# Defining a common order for UTs based on the 2001 literacy rates
+uts_data$UT_Order <- reorder(uts_data$`Country/ States/ Union Territories Name`, 
+                             uts_data$`Literacy Rate (Persons) - Total - 2001`)
+
+# Plotting for 2001 Literacy Rates for UTs
+plot_2001_uts <- ggplot(uts_data, aes(x = UT_Order, y = `Literacy Rate (Persons) - Total - 2001`)) +
+  geom_bar(stat = "identity", fill = "pink") +
+  coord_flip() +
+  labs(x = "Union Territory", y = "Literacy Rate (2001)", title = "Literacy Rate in UT's(2001)") +
+  theme_minimal()
+
+# Plotting for 2011 Literacy Rates for UTs, keeping the same order as 2001
+plot_2011_uts <- ggplot(uts_data, aes(x = UT_Order, y = `Literacy Rate (Persons) - Total - 2011`)) +
+  geom_bar(stat = "identity", fill = "darkblue") +
+  coord_flip() +
+  labs(x = "Union Territory", y = "Literacy Rate (2011)", title = "Literacy Rate in UT's(2011)") +
+  theme_minimal()
+
+
+# Displaying UTs plots side by side
+plot_2001_uts | plot_2011_uts
+```
+
+```{r}
+#| echo: FALSE
+#| label: fig-3
+#| fig-cap: "Comparison of Rural and Urban Literacy Rates in States (2011)"
+
+# Converting the data set into a long format
+data_long_2011 <- gather(states_data, key = "Population", value = "Literacy_Rate", 
+                         `Literacy Rate (Persons) - Rural - 2011`, 
+                         `Literacy Rate (Persons) - Urban - 2011`)
+
+# Modifying the Population labels for clarity
+data_long_2011$Population <- gsub("Literacy Rate \\(Persons\\) - ", "", data_long_2011$Population)
+
+# Creating a line plot comparing Rural and Urban literacy rates for 2011
+plot_line_2011 <- ggplot(data_long_2011, aes(x = State_Order, y = Literacy_Rate, color = Population, group = Population)) +
+  geom_line(size = 1.2) + 
+  geom_point(size = 2) +  
+  coord_flip() +
+  labs(x = "State", y = "Literacy Rate (2011)", title = "Rural vs Urban Literacy Rates in States (2011)") +
+  theme_minimal() 
+
+# Displaying the plot
+plot_line_2011
+```
+```{r}
+#| echo: FALSE
+#| label: fig-4
+#| fig-cap: "Comparison of Rural and Urban Literacy Rates in Union Territories (2011)"
+
+# Subsetting the data for Union Territories
+uts_data_2011 <- uts_data 
+
+# Defining a common order for UTs based on one of the literacy rates (e.g., Rural Literacy in 2011)
+uts_data_2011$UT_Order <- reorder(uts_data_2011$`Country/ States/ Union Territories Name`, 
+                                  uts_data_2011$`Literacy Rate (Persons) - Rural - 2011`)
+
+# Reshaping the data for UTs for rural and urban literacy rates in 2011
+data_long_ut_2011 <- gather(uts_data_2011, key = "Population", value = "Literacy_Rate", 
+                            `Literacy Rate (Persons) - Rural - 2011`, 
+                            `Literacy Rate (Persons) - Urban - 2011`)
+
+# Modifying the Population labels for clarity (for example, remove the extra text)
+data_long_ut_2011$Population <- gsub("Literacy Rate \\(Persons\\) - ", "", data_long_ut_2011$Population)
+
+# Creating a line plot comparing Rural and Urban literacy rates for UTs in 2011
+plot_line_ut_2011 <- ggplot(data_long_ut_2011, aes(x = UT_Order, y = Literacy_Rate, color = Population, group = Population)) +
+  geom_line(size = 1.2) +  
+  geom_point(size = 2) +   
+  coord_flip() +
+  labs(x = "Union Territory", y = "Literacy Rate (2011)", title = "Rural vs Urban Literacy Rates in Union Territories (2011)") +
+  theme_minimal()
+
+# Displaying the plot
+plot_line_ut_2011
+
+```
+
+
+```{r}
+#| echo: FALSE
+#| label: tbl-one
+#| tbl-cap: "Highest Literacy rates in Urban and Rural region of India"
+
+# Creating a table showcasing top 10 states/union territories with highest rates
+top_10 <- data %>%
+  select(`Country/ States/ Union Territories Name`, 
+         `Literacy Rate (Persons) - Rural - 2001`, `Literacy Rate (Persons) - Urban - 2001`, 
+         `Literacy Rate (Persons) - Rural - 2011`, `Literacy Rate (Persons) - Urban - 2011`) |>
+  arrange(desc(`Literacy Rate (Persons) - Rural - 2011`), desc(`Literacy Rate (Persons) - Urban - 2011`)) |>
+  slice_head(n = 10)
+
+# Using kable to create the table 
+kable(top_10, caption = "Top 10 States/Union Territories with Highest Rural and Urban Literacy Rates (2011 vs 2001)")
+
+```
 

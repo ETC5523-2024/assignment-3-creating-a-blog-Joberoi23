@@ -5,13 +5,17 @@ website:
   title: "Jap Analysis"
   navbar:
     right:
+      - text: Blog
+        href: index1.qmd
       - about.qmd
       - icon: github
-        href: https://github.com/Joberoi23
+        href: https://github.com/nsal0017
+      - icon: LinkedIn
+        href: https://www.linkedin.com/in/japneet-oberoi-44a126202/
+
 format:
   html:
-    theme: Litera
+    theme: lumen
     css: styles.css
-
 
 

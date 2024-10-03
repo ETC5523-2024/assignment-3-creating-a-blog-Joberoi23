@@ -1,38 +1,164 @@
-/* css styles */
-.navbar-dark, .quarto-title-banner {
-  background-color: #006DAE;
-}
-
+/* Global Styling for Body */
 body {
-  background-color: #1e1e1e;  /* Dark grey background for consistency with cyborg theme */
-  color: #e0e0e0; /* Light grey text for readability */
+  background-color: #f4f4f9;  /* Light grey background */
+  color: #000000;  /* Black text color for readability */
+  font-family: Georgia, serif;  /* Georgia for body text */
+  line-height: 1.6;  /* Improved line spacing for readability */
+  margin: 0;
+  padding: 0;
 }
 
-/* Custom Font Colors for Headings */
+/* Custom Font for Headings (Mono) */
 h1, h2, h3, h4, h5, h6 {
-  color: #00d1b2;  /* Bright teal for headings */
+  color: #000000;  /* Black color for headings */
+  font-family: 'Courier Prime', monospace;  /* Monospace font for headers */
+  margin-top: 20px;
 }
 
 /* Customize Links */
 a {
-  color: #ffdd57;  /* Yellow link color for contrast against dark background */
+  color:  #e67e22;  /* Bright Orange for links */
   text-decoration: none;
 }
 
 a:hover {
-  color: #f39c12;  /* Slightly darker yellow on hover */
+  color:  #e67e22;  /* Bright Orange on hover */
 }
 
 /* Code Blocks */
 pre, code {
-  background-color: #2d2d2d;  /* Darker grey for code blocks */
-  color: #e0e0e0;  /* Light grey text in code blocks */
+  background-color: #ecf0f1;  /* Light grey for code blocks */
+  color: #2c3e50;  /* Dark grey text in code blocks */
+  font-family: 'Courier New', monospace;  /* Monospace font for code */
+  border-radius: 5px;  /* Soft corners for modern look */
+  padding: 12px;
+  overflow-x: auto;  /* Prevent horizontal overflow on smaller screens */
 }
 
 /* Navbar Styling */
 .navbar {
-  background-color: #272b30;  /* Darker background for the navbar */
+  background-color: #36454F;  /* Charcoal background for navbar */
+  padding: 15px;
 }
 
 .navbar a {
-  color: #00d1b2;  /* Teal color for navbar links */
+  color: #ecf0f1;  /* Light grey links in navbar */
+  padding: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color:  #e67e22;  /* Bright Orange hover effect */
+}
+
+/* Input Fields Styling */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #ecf0f1;  /* Light grey input fields */
+  font-family: Georgia, serif;  /* Georgia font for inputs */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #002147;  /* Dark blue background for footer */
+  color: #ecf0f1;  /* Light grey text */
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 1px solid #bdc3c7;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 12px 15px;
+}
+
+table th {
+  background-color: #2980b9;  /* Deep blue for table headers */
+  color: #ffffff;
+}
+
+table tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tr:nth-of-type(even) {
+  background-color: #f3f3f3;  /* Subtle alternating row colors */
+}
+
+table tr:last-of-type {
+  border-bottom: 2px solid #2980b9;
+}
+
+table tr:hover {
+  background-color: #f2f2f2;  /* Subtle hover effect for rows */
+}
+
+/* Styling for the Title Banner */
+.quarto-title-banner {
+  background-color:  #36454F;  /* Teal background */
+  color: #ffffff;  /* White text */
+  padding: 20px;
+  text-align: center;
+}
+
+.quarto-title-banner h1.title {
+  color: #ffffff;  /* White text for the title */
+}
+
+.quarto-categories .quarto-category a {
+  color: #ffffff;  /* White for category links */
+}
+
+/* Styling for the GitHub and LinkedIn buttons */
+.about-link {
+  background-color:  ;  /* Sage Green background */
+  color: #ffffff;  /* White text */
+  padding: 10px 20px;  /* Padding inside the buttons */
+  border-radius: 5px;  /* Rounded corners */
+  text-decoration: none;  /* Remove underline from links */
+  display: inline-block;  /* Ensures buttons behave as block elements */
+  margin-right: 10px;  /* Adds spacing between the buttons */
+}
+
+.about-link:hover {
+  background-color: #008080;  /* Darker Sage Green on hover */
+  color: #000000;  /* Keep white text on hover */
+}
+
+.about-link-text {
+  color: #000000;  /* White text inside the buttons */
+}
+
+.about-link i {
+  margin-right: 5px;  /* Add space between the icon and the text */
+}
+/* Change the color of your name heading */
+h1, h2, .author-name {
+  color: #008080;  /* Example:  color */
+}
+
+/* Change the border-bottom color */
+.navbar {
+  border-bottom: 2px solid #78866B;  /* Sage Green */
+}
+
+

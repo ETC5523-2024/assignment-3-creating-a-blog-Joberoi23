@@ -1,0 +1,19 @@
+---
+title: "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)"
+author: "Japneet Kaur Oberoi" 
+date: 10/04/2024
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+
+
+
+

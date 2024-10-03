@@ -25,22 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,19 +70,77 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../../styles.css">
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Jap Analysis</span>
     </a>
   </div>
@@ -91,11 +151,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index1.html"> 
+    <a class="nav-link active" href="./index1.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Japneet Kaur Oberoi</span></a>
   </li>  
   <li class="nav-item compact">
@@ -118,16 +178,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-page-left">
       <h1 class="title">Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">blog</div>
-              </div>
-                  </div>
+                      </div>
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       <div>
       <div class="quarto-title-meta-heading">Author</div>
@@ -147,218 +204,63 @@ ul.task-list li input[type="checkbox"] {
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="blog">blog <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
-<p>This is a blog post about Literacy Rates in India. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<section id="problem-description" class="level2">
-<h2 class="anchored" data-anchor-id="problem-description">Problem Description</h2>
-<p>Any nation’s literacy rate is a key sign of its socio-economic development. The literacy rate in India is calculated by dividing the total number of literate people aged 7 or older by the total population aged 7 or older, then multiplying the result by 100. Literacy data is gathered every ten years through the census. This literacy rate informs about the percentage of the population proficient in reading and writing.</p>
-<p>In this blog, we look at the differences in literacy rates between the 2001 and 2011 census periods across Indian states and union territories. The main goal is to check whether there have been any significant improvements in total literacy rates over the years and to examine the differences between rural and urban literacy rates. The analysis also aims to determine whether there is a notable gap between rural and urban literacy rates and whether the gap is narrow or wide.</p>
-</section>
-<section id="data-description" class="level2">
-<h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
-<p><strong>Data Source</strong></p>
-<p>The data set was downloaded from the <a href="https://www.kaggle.com/">Kaggle Website</a> called <a href="https://www.kaggle.com/datasets/doncorleone92/govt-of-india-literacy-rate?resource=download">Govt Of India Literacy Rate</a>. Firstly we logged into the Kaggle website using a gmail account then we looked for literacy rates of India released by the government. The website provides a csv file which is easy to download and then it was loaded in Rstudio using the <code>read_csv</code> function.</p>
-<p><strong>Data Dictionary</strong></p>
-<p>The data set has 8 variables which include information about the percentage of literacy rates of India and the states and Union territories in India. It also calculates the rates for Urban and rural populations for the years 2001 and 2011. The variables are:</p>
-<ol type="1">
-<li>Category: Indicates whether the entry is a State or a Union Territory.</li>
-<li>Country/ States/ Union Territories Name: The names of the state or union territory.</li>
-<li>Literacy Rate (Persons) - Total - 2001: Overall percentage of literacy rate in 2001.</li>
-<li>Literacy Rate (Persons) - Total - 2011: Overall percentage of literacy rate in 2011.</li>
-<li>Literacy Rate (Persons) - Rural - 2001: Percentage of Rural literacy rate in 2001.</li>
-<li>Literacy Rate (Persons) - Rural - 2011: Percentage of Rural literacy rate in 2011.</li>
-<li>Literacy Rate (Persons) - Urban - 2001: Percentage of Urban literacy rate in 2001.</li>
-<li>Literacy Rate (Persons) - Urban - 2011: Percentage of Urban literacy rate in 2011.</li>
-</ol>
-<p>India has 28 states and 8 union territories. States enjoy a more autonomy, managing local governance, education, health, and law enforcement, while union territories are typically governed by the central government. Some union territories, like Delhi and Puducherry, have partial statehood, allowing them to have their own legislatures with limited authority.</p>
-<p>While the data set used in the analysis is from the 2001 and 2011 census, it only includes information for 7 Union territories. This is because Ladakh, the 8th Union territory, was not formed until 2019, after being separated from the state of Jammu and Kashmir. Therefore, Ladakh is not represented in the census data used for this analysis.</p>
-<p><strong>Details of work</strong></p>
-</section>
-<section id="analysis" class="level2">
-<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
-<p>The plots show the Total Literacy Rates across all states in India from the 2001 and 2011 censuses.</p>
-<ul>
-<li><p>States like Kerala, Mizoram, and Goa consistently show high literacy rates across both 2001 and 2011.</p></li>
-<li><p>States with lower literacy rates in 2001, such as Bihar and Jharkhand, show some improvement by 2011, although they continue to have lower literacy rates compared to other states.</p></li>
-<li><p>Most states show an overall increase in literacy rates over the decade, indicating that educational policies and initiatives taken during this period may have had a positive impact.</p></li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-1-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Comparison of Literacy Rates in States (2001 vs 2011)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p><a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a> shows the plot The plots</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-2" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-2-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Comparison of Literacy Rates in Union Territories (2001 vs 2011)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-3" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-3-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Comparison of Rural and Urban Literacy Rates in States (2011)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-4" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-4-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Comparison of Rural and Urban Literacy Rates in Union Territories (2011)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div id="tbl-one" class="cell quarto-float anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Highest Literacy rates in Urban and Rural region of India
-</figcaption>
-<div aria-describedby="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<table class="do-not-create-environment cell table table-sm table-striped small">
-<caption>Top 10 States/Union Territories with Highest Rural and Urban Literacy Rates (2011 vs 2001)</caption>
-<colgroup>
-<col style="width: 20%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 19%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Country/ States/ Union Territories Name</th>
-<th style="text-align: right;">Literacy Rate (Persons) - Rural - 2001</th>
-<th style="text-align: right;">Literacy Rate (Persons) - Urban - 2001</th>
-<th style="text-align: right;">Literacy Rate (Persons) - Rural - 2011</th>
-<th style="text-align: right;">Literacy Rate (Persons) - Urban - 2011</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Kerala</td>
-<td style="text-align: right;">90.0</td>
-<td style="text-align: right;">93.2</td>
-<td style="text-align: right;">93.0</td>
-<td style="text-align: right;">95.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Lakshadweep</td>
-<td style="text-align: right;">85.0</td>
-<td style="text-align: right;">88.6</td>
-<td style="text-align: right;">91.6</td>
-<td style="text-align: right;">91.9</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Goa</td>
-<td style="text-align: right;">79.7</td>
-<td style="text-align: right;">84.4</td>
-<td style="text-align: right;">86.6</td>
-<td style="text-align: right;">90.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Tripura</td>
-<td style="text-align: right;">69.7</td>
-<td style="text-align: right;">89.2</td>
-<td style="text-align: right;">84.9</td>
-<td style="text-align: right;">93.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">A &amp; N Islands</td>
-<td style="text-align: right;">78.7</td>
-<td style="text-align: right;">86.6</td>
-<td style="text-align: right;">84.5</td>
-<td style="text-align: right;">90.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Mizoram</td>
-<td style="text-align: right;">81.3</td>
-<td style="text-align: right;">96.1</td>
-<td style="text-align: right;">84.1</td>
-<td style="text-align: right;">97.6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Himachal Pradesh</td>
-<td style="text-align: right;">75.1</td>
-<td style="text-align: right;">88.9</td>
-<td style="text-align: right;">81.9</td>
-<td style="text-align: right;">91.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">NCT of Delhi</td>
-<td style="text-align: right;">78.1</td>
-<td style="text-align: right;">81.9</td>
-<td style="text-align: right;">81.9</td>
-<td style="text-align: right;">86.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Daman &amp; Diu</td>
-<td style="text-align: right;">75.8</td>
-<td style="text-align: right;">82.3</td>
-<td style="text-align: right;">81.4</td>
-<td style="text-align: right;">89.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Chandigarh</td>
-<td style="text-align: right;">75.6</td>
-<td style="text-align: right;">82.6</td>
-<td style="text-align: right;">80.7</td>
-<td style="text-align: right;">86.2</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</figure>
-</div>
-</div>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="blog" data-listing-date-sort="1727964000000" data-listing-file-modified-sort="1727955685636" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1546">
+<div class="thumbnail">
+<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/welcome/index.html" class="no-external">Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/welcome/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('blog'); return false;">
+blog
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/welcome/index.html" class="no-external">This is a blog post about Literacy Rates in India. Welcome!</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/welcome/index.html" class="no-external">
+<div class="listing-date">
+Oct 4, 2024
+</div>
+<div class="listing-author">
+Japneet Kaur Oberoi
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
