@@ -17,12 +17,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Customize Links */
 a {
-  color:  #e67e22;  /* Bright Orange for links */
+  color: #e67e22;  /* Bright Orange for links */
   text-decoration: none;
 }
 
 a:hover {
-  color:  #e67e22;  /* Bright Orange on hover */
+  color: #e67e22;  /* Bright Orange on hover */
 }
 
 /* Code Blocks */
@@ -49,7 +49,7 @@ pre, code {
 }
 
 .navbar a:hover {
-  color:  #e67e22;  /* Bright Orange hover effect */
+  color: #e67e22;  /* Bright Orange hover effect */
 }
 
 /* Input Fields Styling */
@@ -114,7 +114,7 @@ table tr:hover {
 
 /* Styling for the Title Banner */
 .quarto-title-banner {
-  background-color:  #36454F;  /* Teal background */
+  background-color: #36454F;  /* Teal background */
   color: #ffffff;  /* White text */
   padding: 20px;
   text-align: center;
@@ -130,8 +130,8 @@ table tr:hover {
 
 /* Styling for the GitHub and LinkedIn buttons */
 .about-link {
-  background-color:  ;  /* Sage Green background */
-  color: #ffffff;  /* White text */
+  background-color: #f4f4f9;  /* Sage Green background */
+  color:  #008080;  /* White text */
   padding: 10px 20px;  /* Padding inside the buttons */
   border-radius: 5px;  /* Rounded corners */
   text-decoration: none;  /* Remove underline from links */
@@ -141,19 +141,16 @@ table tr:hover {
 
 .about-link:hover {
   background-color: #008080;  /* Darker Sage Green on hover */
-  color: #000000;  /* Keep white text on hover */
-}
-
-.about-link-text {
-  color: #000000;  /* White text inside the buttons */
+  color: #ffffff;  /* White text on hover */
 }
 
 .about-link i {
   margin-right: 5px;  /* Add space between the icon and the text */
 }
+
 /* Change the color of your name heading */
 h1, h2, .author-name {
-  color: #008080;  /* Example:  color */
+  color: #008080;  /* Example: color for name heading */
 }
 
 /* Change the border-bottom color */
@@ -161,4 +158,33 @@ h1, h2, .author-name {
   border-bottom: 2px solid #78866B;  /* Sage Green */
 }
 
+/* Container for two-column layout */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Image takes 1 part, text takes 2 parts */
+  gap: 20px; /* Space between the columns */
+  align-items: center;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+/* Styling for the image */
+.about-section img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  justify-self: center; /* Centers the image horizontally */
+}
+
+/* Text content */
+.about-section .content {
+  text-align: left;
+}
+/* Center images */
+p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; /* Ensures responsiveness */
+}
 
