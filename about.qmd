@@ -2,7 +2,7 @@
 title: "Japneet Kaur Oberoi"
 image: profile.jpg
 about:
-  template: jolla
+  template: marquee
   links:
     - icon: github
       text: Github
@@ -67,9 +67,9 @@ University of Delhi, Delhi
 8.338 CGPA | First Division with Distinction
 
 
-:::
+::: 
 
-::: {.column width="60%"}
+::: {.column width="40%"}
 
 
 ## Work Experience 
@@ -81,9 +81,6 @@ Kaveera Da Dhaba
 Managing the day-to-day operations and
 enhancing customer experience by curating
 experiences and hosting multiple events.
-Focussed on attracting new audience through
-social media marketing.
-
 
 Teacher’s Assistant (Mar‘23 - Dec’23)
 
@@ -92,11 +89,9 @@ Universal Competition Classes
 Collaborating closely with lead teachers and
 assisting in implementing lesson plans, maintaining
 classroom order, and offering personalised
-assistance to students contributing to a holistic
-learning environment
-
+assistance to students.
 :::
 
-::: {.column width="60%"}
+::: {.column width="40%"}
 :::
 :::

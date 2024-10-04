@@ -180,11 +180,11 @@ h1, h2, .author-name {
 .about-section .content {
   text-align: left;
 }
-/* Center images */
-p img {
+.about-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%; /* Ensures responsiveness */
+  max-width: 60%; /* Adjust this to change the size */
+  height: auto; /* Maintain aspect ratio */
 }
 
