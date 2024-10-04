@@ -10,11 +10,17 @@ about:
     - icon: linkedin
       text: Linkedin
       href: https://www.linkedin.com/in/japneet-oberoi-44a126202/
+    - icon: youtube
+      text: YouTube
+      href: https://www.youtube.com/channel/UC4iTT_YntlKJ2y6K4GdHdEg
 ---
 
 I am currently pursuing a Master of Business Analytics at Monash University. I hold a Bachelor's degree in Commerce from Delhi University, where I developed a strong foundation in business principles and economics. My current focus is on leveraging data analytics and machine learning to solve complex business problems and drive data-informed decision-making. 
 
 In addition to my studies, I co-manage a YouTube channel with a friend, where we post vlogs exploring various places around Melbourne. It's a creative outlet that allows me to showcase the vibrant culture and hidden gems of the city. Whether it's through data or digital content, I enjoy connecting with others and sharing experiences.
+
+::: columns
+::: {.column width="40%"}
 
 
 ## Interests
@@ -27,15 +33,70 @@ Digital Content Creartion
 
 Business Administration
 
+:::
 
-## Contact
+::: {.column width="60%"}
 
-You can reach me through the following channels:
+## Certifications
 
-**LinkedIn**: [Japneet Oberoi](https://www.linkedin.com/in/japneet-oberoi-44a126202/)
-
-**Email**: [Japneet Oberoi](mailto:japneetkoberoi@gmail.com)
-
-**Address**: Monash University, Clayton, VIC 3800, Australia
+University of Michigan -
+Programming for Everybody (Getting Started with
+Python)
 
 
+Google Digital Unlocked -
+Fundamentals of Digital Marketing
+
+
+:::
+
+::: {.column width="60%"}
+
+## Education
+
+Masters in Business Analytics - 
+Monash University, Clayton Campus,
+Melbourne
+
+Ongoing
+
+Bachelor of Commerce (Honours) - 
+Sri Guru Gobind Singh College of Commerce
+University of Delhi, Delhi
+
+8.338 CGPA | First Division with Distinction
+
+
+:::
+
+::: {.column width="60%"}
+
+
+## Work Experience 
+
+Operations & Marketing (Dec‘21 - Dec‘22)
+
+Kaveera Da Dhaba
+
+Managing the day-to-day operations and
+enhancing customer experience by curating
+experiences and hosting multiple events.
+Focussed on attracting new audience through
+social media marketing.
+
+
+Teacher’s Assistant (Mar‘23 - Dec’23)
+
+Universal Competition Classes
+
+Collaborating closely with lead teachers and
+assisting in implementing lesson plans, maintaining
+classroom order, and offering personalised
+assistance to students contributing to a holistic
+learning environment
+
+:::
+
+::: {.column width="60%"}
+:::
+:::
