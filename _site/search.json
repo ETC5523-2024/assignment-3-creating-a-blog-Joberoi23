@@ -7,39 +7,39 @@
     "text": "I am currently pursuing a Master of Business Analytics at Monash University. I hold a Bachelor’s degree in Commerce from Delhi University, where I developed a strong foundation in business principles and economics. My current focus is on leveraging data analytics and machine learning to solve complex business problems and drive data-informed decision-making.\nIn addition to my studies, I co-manage a YouTube channel with a friend, where we post vlogs exploring various places around Melbourne. It’s a creative outlet that allows me to showcase the vibrant culture and hidden gems of the city. Whether it’s through data or digital content, I enjoy connecting with others and sharing experiences."
   },
   {
+    "objectID": "about.html#interests",
+    "href": "about.html#interests",
+    "title": "Japneet Kaur Oberoi",
+    "section": "Interests",
+    "text": "Interests\nData Analytics\nDigital Marketing\nDigital Content Creartion\nBusiness Administration"
+  },
+  {
+    "objectID": "about.html#certifications",
+    "href": "about.html#certifications",
+    "title": "Japneet Kaur Oberoi",
+    "section": "Certifications",
+    "text": "Certifications\nUniversity of Michigan - Programming for Everybody (Getting Started with Python)\nGoogle Digital Unlocked - Fundamentals of Digital Marketing"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Japneet Kaur Oberoi",
+    "section": "Education",
+    "text": "Education\nMasters in Business Analytics - Monash University, Clayton Campus, Melbourne\nOngoing\nBachelor of Commerce (Honours) - Sri Guru Gobind Singh College of Commerce University of Delhi, Delhi\n8.338 CGPA | First Division with Distinction"
+  },
+  {
+    "objectID": "about.html#work-experience",
+    "href": "about.html#work-experience",
+    "title": "Japneet Kaur Oberoi",
+    "section": "Work Experience",
+    "text": "Work Experience\nOperations & Marketing (Dec‘21 - Dec‘22)\nKaveera Da Dhaba\nManaging the day-to-day operations and enhancing customer experience by curating experiences and hosting multiple events.\nTeacher’s Assistant (Mar‘23 - Dec’23)\nUniversal Competition Classes\nCollaborating closely with lead teachers and assisting in implementing lesson plans, maintaining classroom order, and offering personalised assistance to students."
+  },
+  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
     "section": "",
     "text": "This is a blog post about Literacy Rates in India. Welcome!"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
-    "section": "",
-    "text": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nOct 4, 2024\n\n\nJapneet Kaur Oberoi\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#problem-description",
-    "href": "index.html#problem-description",
-    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
-    "section": "",
-    "text": "Any nation’s literacy rate is a key sign of its socio-economic development. The actual literacy rate in India is calculated by dividing the total number of literate people aged 7 or older by the total population aged 7 or older, then multiplying the result by 100. Literacy data is gathered every ten years through the census. This regulates the percentage of the population proficient in reading and writing. In this blog we are looking at the variations in literacy rates between the 2001 and 2011 census periods across Indian states and union territories for the analysis. The objective is to comprehend local advancements and pinpoint areas that would require additional educational policies."
-  },
-  {
-    "objectID": "index.html#data-description",
-    "href": "index.html#data-description",
-    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
-    "section": "Data Description",
-    "text": "Data Description\nData Source\nThe data set was downloaded from the Kaggle Website called Govt Of India Literacy Rate. Firstly we logged into the Kaggle website using a gmail account then we looked for literacy rates of India released by the government. The website provides a csv file which is easy to download and then it was loaded in Rstudio using the read_csv function.\n\ndata &lt;- read_csv(\"data/GOI.csv\")\n\nRows: 36 Columns: 8\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): Category, Country/ States/ Union Territories Name\ndbl (6): Literacy Rate (Persons) - Total - 2001, Literacy Rate (Persons) - T...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nData Dictionary\nThe data set has 8 variables which include information about the percentage of literacy rates of India and the states and Union territories in India. It also calculates the rates for Urban and rural populations for the years 2001 and 2011. The variables are:\n\nCategory: Indicates whether the entry is a State or a Union Territory.\nCountry/ States/ Union Territories Name: The names of the state or union territory.\nLiteracy Rate (Persons) - Total - 2001: Overall percentage of literacy rate in 2001.\nLiteracy Rate (Persons) - Total - 2011: Overall percentage of literacy rate in 2011.\nLiteracy Rate (Persons) - Rural - 2001: Percentage of Rural literacy rate in 2001.\nLiteracy Rate (Persons) - Rural - 2011: Percentage of Rural literacy rate in 2011.\nLiteracy Rate (Persons) - Urban - 2001: Percentage of Urban literacy rate in 2001.\nLiteracy Rate (Persons) - Urban - 2011: Percentage of Urban literacy rate in 2011.\n\nIndia has 28 States and 8 Union Territories. States enjoy a higher degree of autonomy, managing local governance, education, health, and law enforcement, while union territories are typically governed by the central government. Some union territories, like Delhi and Puducherry, have partial statehood, allowing them to have their own legislatures with limited authority.\nDetails of work"
-  },
-  {
-    "objectID": "index.html#analysis",
-    "href": "index.html#analysis",
-    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
-    "section": "Analysis",
-    "text": "Analysis"
   },
   {
     "objectID": "posts/welcome/index.html#problem-description",
@@ -63,13 +63,6 @@
     "text": "Analysis\nThe plots in Figure 1 shows the total literacy rates across all states in India from the 2001 and 2011 censuses.\n\nStates like Kerala, Mizoram, and Goa consistently show high literacy rates across both 2001 and 2011.\nStates with lower literacy rates in 2001, such as Bihar and Jharkhand, show some improvement by 2011, although they continue to have lower literacy rates compared to other states.\nMost states show an overall increase in literacy rates over the decade, indicating that educational policies and initiatives taken during this period may have had a positive impact.\n\n\n\n\n\n\n\n\n\nFigure 1: Comparison of Literacy Rates in States (2001 vs 2011)\n\n\n\n\n\nThe plots in Figure 2 showcases the total literacy rates across all union territories in India from the 2001 and 2011 censuses.\n\nLakshadweep, Chandigarh, and NCT of Delhi consistently show high literacy rates in both 2001 and 2011.\nDadra and Nagar Haveli shows a significant improvement in literacy between 2001 and 2011 but continues to fall behind the other union territories.\nAll Union Territories exhibit an increase in literacy rates from 2001 to 2011, with the range of literacy rates improving from around 50–75% in 2001 to 60–85% in 2011.\n\n\n\n\n\n\n\n\n\nFigure 2: Comparison of Literacy Rates in Union Territories (2001 vs 2011)\n\n\n\n\n\nThe line graph in Figure 3 visualizes the literacy rates in rural and urban areas of the states in India for the year 2011.\n\nStates with high overall literacy rates tend to have a narrower gap between rural and urban literacy rates, while the states with lower overall literacy rates show a wider gap in rural and urban rates.\nThe scale ranges approximately from 60% to 90% literacy, where the red line represents literacy rates of rural areas and the blue line represents literacy rates of urban areas.\nStates like Jharkhand, Madhya Pradesh, Andhra Pradesh, and Bihar have huge gaps between rural and urban literacy rates.\nThis might indicate that there are disparities in the literacy rates of urban and rural areas in these states.\n\n\n\n\n\n\n\n\n\nFigure 3: Comparison of Rural and Urban Literacy Rates in States (2011)\n\n\n\n\n\nThe line graph in Figure 4 compares the rural and urban literacy rates in Union Territories (UTs) of India for the year 2011.\n\nWhen compared with the literacy rates in the states, union territories generally have fewer disparities in the urban and rural areas.\nLakshadweep has equal literacy rates in both rural and urban areas, while other union territories show a narrow gap in the literacy rates of rural and urban areas.\nSurprisingly, Dadar and Nagar Haveli show a wider gap in the literacy rates of urban and rural areas, with a difference of more than 20%.\n\n\n\n\n\n\n\n\n\nFigure 4: Comparison of Rural and Urban Literacy Rates in Union Territories (2011)\n\n\n\n\n\nIn Table 1, the states and union territories with the lowest literacy rates in rural and urban areas for the years 2001 and 2011 are shown.\n\nDespite being at the bottom, all the states and union territories listed have shown improvement in both rural and urban literacy rates between 2001 and 2011. For instance, Bihar’s rural literacy rates increased from 43.9% in 2001 to 59.8% in 2011, while its urban literacy rate went from 71.9% to 76.9% during the same period.\nThere remains a notable gap between the rural and urban literacy rates in many of these regions. For example, Daman & Diu’s urban literacy rate in 2011 was 89.8%, significantly higher than its rural literacy rate of 64.1%. This highlights the persistent disparity in educational access between rural and urban areas.\nSeveral states, including Andhra Pradesh, Jharkhand, and Rajasthan, have shown considerable improvements in rural literacy rates. For instance, Jharkhand’s rural literacy rate improved from 45.7% in 2001 to 61.1% in 2011.\nThis table demonstrates that although progress is being made in literacy development, the efforts to reduce the urban-rural gap are still ongoing.\n\n\n\n\n\nTable 1: Lowest Literacy rates in Urban and Rural regions of India\n\n\n\n\nBottom 10 States/Union Territories with Lowest Rural and Urban Literacy Rates (2011 vs 2001)\n\n\n\n\n\n\n\n\n\nCountry/ States/ Union Territories Name\nLiteracy Rate (Persons) - Rural - 2001\nLiteracy Rate (Persons) - Urban - 2001\nLiteracy Rate (Persons) - Rural - 2011\nLiteracy Rate (Persons) - Urban - 2011\n\n\n\n\nBihar\n43.9\n71.9\n59.8\n76.9\n\n\nArunachal Pradesh\n47.8\n78.3\n59.9\n82.9\n\n\nAndhra Pradesh\n54.5\n76.1\n60.4\n80.1\n\n\nJharkhand\n45.7\n79.1\n61.1\n82.3\n\n\nRajasthan\n55.3\n76.2\n61.4\n79.7\n\n\nJammu & Kashmir\n49.8\n71.9\n63.2\n77.1\n\n\nMadhya Pradesh\n57.8\n79.4\n63.9\n82.8\n\n\nD & N Haveli\n49.3\n84.4\n64.1\n89.8\n\n\nUttar Pradesh\n52.5\n69.8\n65.5\n75.1\n\n\nChhattisgarh\n60.5\n80.6\n66.0\n84.0"
   },
   {
-    "objectID": "index1.html",
-    "href": "index1.html",
-    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
-    "section": "",
-    "text": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)\n\n\n\n\n\n\nblog\n\n\n\n\n\n\n\n\n\nOct 4, 2024\n\n\nJapneet Kaur Oberoi\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/welcome/index.html#conclusion",
     "href": "posts/welcome/index.html#conclusion",
     "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
@@ -84,45 +77,10 @@
     "text": "Refrences\n\n‘States and Union Territories of India’. Wikipedia, 15 Sept. 2024. Wikipedia, https://en.wikipedia.org/w/index.php?title=States_and_union_territories_of_India&oldid=1245872194.\n‘Literacy in India’. Wikipedia, 7 Aug. 2024. Wikipedia, https://en.wikipedia.org/w/index.php?title=Literacy_in_India&oldid=1239146465."
   },
   {
-    "objectID": "about.html#interests",
-    "href": "about.html#interests",
-    "title": "Japneet Kaur Oberoi",
-    "section": "Interests",
-    "text": "Interests\nData Analytics\nDigital Marketing\nDigital Content Creartion\nBusiness Administration"
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "Japneet Kaur Oberoi",
-    "section": "Contact",
-    "text": "Contact\nYou can reach me through the following channels:\nLinkedIn: Japneet Oberoi\nEmail: Japneet Oberoi\nAddress: Monash University, Clayton, VIC 3800, Australia"
-  },
-  {
-    "objectID": "about.html#certifications",
-    "href": "about.html#certifications",
-    "title": "Japneet Kaur Oberoi",
-    "section": "Certifications",
-    "text": "Certifications\nUniversity of Michigan - Programming for Everybody (Getting Started with Python)\nGoogle Digital Unlocked - Fundamentals of Digital Marketing"
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "Japneet Kaur Oberoi",
-    "section": "Education",
-    "text": "Education\nMasters in Business Analytics - Monash University, Clayton Campus, Melbourne\nOngoing\nBachelor of Commerce (Honours) - Sri Guru Gobind Singh College of Commerce University of Delhi, Delhi\n8.338 CGPA | First Division with Distinction"
-  },
-  {
-    "objectID": "about.html#wrok-experience",
-    "href": "about.html#wrok-experience",
-    "title": "Japneet Kaur Oberoi",
-    "section": "Wrok Experience",
-    "text": "Wrok Experience\nOperations & Marketing (Dec‘21 - Dec‘22)\nKaveera Da Dhaba\nManaging the day-to-day operations and enhancing customer experience by curating experiences and hosting multiple events. Focussed on attracting new audience through social media marketing.\nTeacher’s Assistant (Mar‘23 - Dec’23)\nUniversal Competition Classes\nCollaborating closely with lead teachers and assisting in implementing lesson plans, maintaining classroom order, and offering personalised assistance to students contributing to a holistic learning environment"
-  },
-  {
-    "objectID": "about.html#work-experience",
-    "href": "about.html#work-experience",
-    "title": "Japneet Kaur Oberoi",
-    "section": "Work Experience",
-    "text": "Work Experience\nOperations & Marketing (Dec‘21 - Dec‘22)\nKaveera Da Dhaba\nManaging the day-to-day operations and enhancing customer experience by curating experiences and hosting multiple events.\nTeacher’s Assistant (Mar‘23 - Dec’23)\nUniversal Competition Classes\nCollaborating closely with lead teachers and assisting in implementing lesson plans, maintaining classroom order, and offering personalised assistance to students."
+    "objectID": "index1.html",
+    "href": "index1.html",
+    "title": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)",
+    "section": "",
+    "text": "Analysing Literacy Rate Changes in Indian States and Union Territories (2001–2011 census)\n\n\n\n\n\n\nblog\n\n\n\n\n\n\n\n\n\nOct 4, 2024\n\n\nJapneet Kaur Oberoi\n\n\n\n\n\n\nNo matching items"
   }
 ]

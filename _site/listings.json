@@ -1,11 +1,5 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/index1.html",
     "items": [
       "/posts/welcome/index.html"
