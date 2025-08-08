@@ -15,7 +15,7 @@ about:
       href: https://www.youtube.com/channel/UC4iTT_YntlKJ2y6K4GdHdEg
 ---
 
-I am currently pursuing a Master of Business Analytics at Monash University. I hold a Bachelor's degree in Commerce from Delhi University, where I developed a strong foundation in business principles and economics. My current focus is on leveraging data analytics and machine learning to solve complex business problems and drive data-informed decision-making. 
+I am currently pursuing Master of Business Analytics at Monash University. I hold a Bachelor's degree in Commerce from Delhi University, where I developed a strong foundation in business principles and economics. My current focus is on leveraging data analytics and machine learning to solve complex business problems and drive data-informed decision-making. 
 
 In addition to my studies, I co-manage a YouTube channel with a friend, where we post vlogs exploring various places around Melbourne. It's a creative outlet that allows me to showcase the vibrant culture and hidden gems of the city. Whether it's through data or digital content, I enjoy connecting with others and sharing experiences.
 
@@ -74,22 +74,23 @@ University of Delhi, Delhi
 
 ## Work Experience 
 
-Operations & Marketing (Dec‘21 - Dec‘22)
+**Analytics Manager at Universal Competition Classes, New Delhi, India Jan 2023 – Dec 2023**
+Data Driven Lesson Plans - Analyzed student data to uncover learning patterns and content retention trends;
+collaborated with staff to design data-driven lesson plans, resulting in measurable gains in student performance
+Dashboard Visualization / Reports- Conceived and Developed Teachers Dashboard for the training institute to
+deliver insights on Student Attendance, Student Performance Overview, Progress by Subject, Student
+Demographics and Grouping, trends on student engagement and other KPIs
 
-Kaveera Da Dhaba
 
-Managing the day-to-day operations and
-enhancing customer experience by curating
-experiences and hosting multiple events.
+**Operations & Marketing Manager at Kaveera Da Dhaba Restaurant, India Jan 2021 – Jan 2022**
+KPIs and Success Metrics - Advised the owner & stakeholders to define KPIs and success metrics for the first
+time, enabling data-driven performance evaluation for ongoing business health monitoring. This analysis led to
+business expansion into new food categories and delivery methods such as pick up and Zomato (doordash), to
+meet customer demands.
+Dashboard Visualization - Conceived and Developed Business Dashboard for the owner which had information
+related to the KPI, Sales and Revenue Overview, Inventory and Food Cost Management, Staff and Labor
+Productivity, Order and Delivery Insights, Event and Special Day Tracking
 
-Teacher’s Assistant (Mar‘23 - Dec’23)
-
-Universal Competition Classes
-
-Collaborating closely with lead teachers and
-assisting in implementing lesson plans, maintaining
-classroom order, and offering personalised
-assistance to students.
 :::
 
 ::: {.column width="40%"}
